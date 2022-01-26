@@ -9,6 +9,7 @@ let elFormFilmInp = document.querySelector(".search__film");
 let elFormFilmRating = document.querySelector(".search__rating");
 let elFormSelectNum = document.querySelector(".form__select-num");
 let elBookmarkList = document.querySelector(".bookmark__list");
+let elFormBtn = document.querySelector(".form__btn")
 
 elResult.textContent = movies.length;
 
@@ -248,8 +249,50 @@ const renderFilm = function (filmArray, element) {
 
 renderFilm(movies, elList);
 
-elModalForm.addEventListener("submit", function (evt) {
+
+elFormFilmInp.addEventListener("keyup", function (evt) {
   evt.preventDefault();
+
+  let filmInpValue = elFormFilmInp.value;
+
+  let filtersdFilm = [];
+
+  movies.forEach((film) => {
+    if(film.title.includes(filmInpValue)){
+      filtersdFilm.push(film)
+    }
+  });
+
+  elList.innerHTML = null;
+
+  renderFilm(filtersdFilm, elList);
+  elResult.textContent = filtersdFilm.length;
+});
+
+// elModalForm.addEventListener("submit", function (evt) {
+//   evt.preventDefault();
+
+//   let filmRatingSearch = Number(elFormFilmRating.value);
+
+//   let filterRating = [];
+
+//   movies.forEach((film) => {
+//     if (filmRatingSearch === film.imdbRating) {
+//       filterRating.push(film);
+//     }
+//   });
+
+//   elList.innerHTML = null;
+//   elFormFilmRating.value = null;
+
+//   renderFilm(filterRating, elList);
+//   elResult.textContent = filterRating.length;
+// });
+
+
+elFormBtn.addEventListener("click", function (evt) {
+  evt.preventDefault();
+
   let selectValue = elFormSelect.value;
   let genaratorFilm = [];
 
@@ -271,43 +314,3 @@ elModalForm.addEventListener("submit", function (evt) {
     elResult.textContent = genaratorFilm.length;
   }
 });
-
-// elModalForm.addEventListener("submit", function (evt) {
-//   evt.preventDefault();
-
-//   let filmInpValue = elFormFilmInp.value;
-
-//   let filtersdFilm = [];
-
-//   movies.forEach((film) => {
-//     if(film.title.includes(filmInpValue)){
-//       filtersdFilm.push(film)
-//     }
-//   });
-
-//   elList.innerHTML = null;
-//   elFormFilmInp.value = null;
-
-//   renderFilm(filtersdFilm, elList);
-//   elResult.textContent = filtersdFilm.length;
-// });
-
-// elModalForm.addEventListener("submit", function (evt) {
-//   evt.preventDefault();
-
-//   let filmRatingSearch = Number(elFormFilmRating.value);
-
-//   let filterRating = [];
-
-//   movies.forEach((film) => {
-//     if (filmRatingSearch === film.imdbRating) {
-//       filterRating.push(film);
-//     }
-//   });
-
-//   elList.innerHTML = null;
-//   elFormFilmRating.value = null;
-
-//   renderFilm(filterRating, elList);
-//   elResult.textContent = filterRating.length;
-// });
