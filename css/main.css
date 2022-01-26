@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+
+/* GENERAL CODES */
+
+html {
+  margin: 0 auto;
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* MOVIES */
+
+.movies__right {
+  width: 70%;
+
+}
+
+.movies__list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.card {
+  width: 434px;
+  height: 670px;
+}
+
+.movies__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px;
+  padding: 0;
+  list-style: none;
+  height: 420px;
+  overflow: scroll;
+}
+
+.movies__item {
+  margin: 12px;
+}
+
+.year__icon {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.year__icon:nth-last-of-type(1){
+  margin-top: 15px;
+}
+
+.card-catigories {
+  width: 410px;
+}
+
+.card-text {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center  ;
+  flex-direction: row-reverse;
+  justify-content: start;
+  font-size: 20px;
+}
+
+.btn__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.movies__left {
+  width: 25%;
+  height: 535px;
+  overflow: scroll;
+}
+
+.movies__left::-webkit-scrollbar {
+  display: none;
+}
+
+.movies__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-catigories {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.sort__icon {
+  font-size: 25px;
+  margin-top: -4px;
+}
+
+/*  BOOKMARK */
+
+.bookmark__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bookmark__item {
+  padding: 15px;
+  border: 4px solid red;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
