@@ -314,3 +314,5 @@ elFormBtn.addEventListener("click", function (evt) {
     elResult.textContent = genaratorFilm.length;
   }
 });
+
+

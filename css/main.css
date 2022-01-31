@@ -43,11 +43,6 @@ img {
 
 .movies__right {
   width: 70%;
-
-}
-
-.movies__list::-webkit-scrollbar {
-  display: none;
 }
 
 
@@ -62,8 +57,6 @@ img {
   margin: -12px;
   padding: 0;
   list-style: none;
-  height: 420px;
-  overflow: scroll;
 }
 
 .movies__item {
@@ -108,13 +101,8 @@ img {
 
 .movies__left {
   width: 25%;
-  height: 535px;
-  overflow: scroll;
 }
 
-.movies__left::-webkit-scrollbar {
-  display: none;
-}
 
 .movies__wrapper {
   display: flex;
